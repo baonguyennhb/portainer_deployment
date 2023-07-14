@@ -9,8 +9,9 @@ services:
     security_opt:
       - no-new-privileges:true
     volumes:
-      - /etc/localtime:/etc/localtime
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ./etc/localtime:/etc/localtime
+      - ./var/run/docker.sock:/var/run/docker.sock
       - ./portainer-data:/data
     ports:
       - 9000:9000
+      - 8000:8000
